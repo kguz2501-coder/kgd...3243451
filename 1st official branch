@@ -40,3 +40,81 @@
   </section>
   
 </body>
+
+body {
+    font-fammily: 'Segow UI', sans serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center
+  padding-top: 50px;
+}
+
+main {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.card {
+background: white;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.info {
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+input[type="password"], input[type="text"] {
+  padding: 1opx;
+  width: 80px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+const passwordInput = document.getElementbyId('passInput');
+
+const strengthText = document.getElementbyId('strengthText');
+ 
+const hasNumber = /\d/; //Check for any digit
+
+const hasSpecial = /[!@#$%^&*(),.?"{}|<>]/; // Check for any of these symbols
+
+passwordInput.addEventListener('input', () => {
+    const val = passwordInput.value;
+  
+  // 1. Check for specific requirements
+  const longEnough = val.length >= 8;
+  const containsNumber = hasNumber.test(val);
+  const containsSpecial = hasSpecial.test(val);
+  
+  // 2. The Judges Decision
+  if (val.length === o) {
+    strengthText.innertext = "Waiting...";
+    strengthText.style.color = "black";
+  } else if (val.length < 6) {
+  strengthText.innertext = "Weak";
+  strengthText.style.color = "red";
+  } else if (val.length >= 6 && val.length < 10) {
+  strengthText.innertext = "Medium";
+  strengthText.style.color = "orange";
+  } else {
+  strengthText.innertext = "Strong";
+  strengthText.style.color = "Green";
+
+    
+    const showPassCheckbox = document.getElementbyId('showPass')
+    
+    showPassCheckbox.addEventListener('change', () => {
+    // If the checkbox is checked, type is 'text', otherwise 'password'
+    if (showPassCheckbox.checked) {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    }
+});
