@@ -1,0 +1,81 @@
+<head>
+  <title>Simple Hover Effects</title>
+</head>
+<body>
+
+  <div id="bgColorBox" class="hover-box hover-box-bg"> BG Color</div>
+  <div id="textColorBox" class="hover-box hover-box-text"> Text Color</div>
+  <div id="SizeBox" class="hover-box hover-box-size">Size</div>
+  <div id="OpacityBox" class="hover-box hover-box-opacity">Opacity</div>
+  <div id="borderBox" class="hover-box hover-box-border">Border</div>
+</body>
+</html>
+
+.hover-box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  color: black;
+  border: 1px solid black;
+  margin: 20px
+  display: flex;
+  jsutify-content: center;
+  align-items: center;
+  cursor: pointer; /*Indicate it's interactive */
+  transition: background-color 0.3s ease,
+    color 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease,
+    opacity 0.3s ease,
+    border 0.3s ease, /*Smooth transitions for CSS-based effects */
+}
+
+.hover-box-bg { } /*Will change background color*/
+.hover-box-text { } /*Will change text color*/
+.hover-box-size { } /*Will change size*/
+.hover-box-opacity { } /*Will change opacity*/
+.hover-box-border { } /*Will add/remover border*/
+
+const bgColorBox = document.getElementbyId("bgColorBox");
+const textColorBox = document.getElementbyId("textColorBox");
+const SizeBox = document.getElementbyId("sizeBox");
+const OpacityBox = document.getElementbyId("opacityBox");
+const borderBox = document.getElementbyId("borderBox");
+
+// 1. Changing Background Color
+bgColorBox.addEventListener("mouseover", function () {
+  this.style.backgroundColor = "lightcolor";
+});
+bgColorBox.addEventListener("mouseout", function () {
+this.style.backgroundColor = "lightblue";
+
+// 2. Changing Text Color
+textcolor.addEventListener("mouseover", function () {
+  this.style.color = "white";
+});
+textcolor.addEventListener("mouseout", function () {
+  this.style.color = "black";
+});
+// 3. Changing Size
+sizebox.addEventListener("mouseover", function () {
+  this.style.width = "120px";
+  this.style.height = "120px";
+});
+sizebox.addEventListener("mouseout", function () {
+  this.style.width = "100px";
+  this.style.height = "100px";
+});
+// 4. Changing Opacity
+opacityBox.addEventListener("mouseover", function () {
+  this.style.opacity = "0.7";
+});
+opacityBox.addEventListener("mouseout", function () {
+  this.style.opacity = "1";
+});
+//5. Adding or Removing a Border
+borderBox.addEventListener("mouseover", function () {
+  this.style.border = "3px solid blue";
+});
+borderBox.addEventListener("mouseout", function () {
+  this.style.border = "1px solid black";
+});
