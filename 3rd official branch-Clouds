@@ -1,0 +1,90 @@
+ <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Learning about weather or Becoming A Meteorologist</h1>
+  </div>
+  
+  <div class="container">
+    <div class="menu">
+      <h2 style="background-color: #8ae; color:white";>Websites</h2>
+      <a href='https://www.accuweather.com/'>Accuweather</a>
+      <a href='https://weather.com/'>Weather.com</a>
+      <a href='https://www.weather.gov'>NWS</a>
+      <a href='https://weather.com/retro/'>Weather Channel (Retro)</a>
+      <br>
+      <br>
+  
+    <div class="main">
+    <h2>Questions and Answers</h2>
+    <p>How to become a Meteorologist? Learn and study about the subject very heavily.</p>
+      <h2>Explore the education and skills needed to pursue meteorology as a career.</h2>
+      <p>What kind of degree do you need to become a meteorologist? Most meteorologists earn a bachelor’s degree in atmospheric science or meteorology. The coursework includes physics, calculus, computer modeling, climatology, and remote sensing.</p>
+     
+          <h2>What skills are most important for someone who wants to become a meteorologist?</h2>
+      <p>A successful meteorologist benefits from a mix of scientific knowledge, technical ability, and communication skills. </p>
+      <ul>
+        <li>Strong Math & Physics</li>
+        <li>Computer & Data Analysis</li>
+        <li>Critical Thinking</li>
+        <li>Observation Skills</li>
+        <li>Communication Skills</li>
+        <li>Teamwork & Collaboration</li>
+      </ul>
+    </div>
+
+    
+* { 
+  box-sizing: border-box;
+}
+body{
+  font-family: Verdana;
+  color: #666b6a;
+}
+.header {
+  background-color: #a0eec0;
+  padding: 15px;
+  text-align: center;
+}
+.container {
+  overflow: auto;
+}
+.menu{
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.menu a{
+  background-color: #8ae;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+.main{ 
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+.right{
+  background-color: #a0eec0;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+.footer{
+  background-color: #8ae;
+  text-align: center;
+  padding:10px; 
+  margin-top:7px;
+}
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
